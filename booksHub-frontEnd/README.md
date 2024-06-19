@@ -18,40 +18,44 @@ This is a Book Upload and Management Application built using MongoDB, Node.js, E
 ### Backend
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/Knirag/BooksHub.git
-    cd BooksHub
-    ```
+
+   ```bash
+   git clone https://github.com/Knirag/BooksHub.git
+   cd BooksHub
+   ```
 
 2. Navigate to the backend directory and install dependencies:
-    ```bash
-    cd booksHub-backEnd
-    npm install
-    ```
+
+   ```bash
+   cd booksHub-backEnd
+   npm install
+   ```
 
 3. Create a `.env` file in the backend directory and add your MongoDB URI:
-    ```env
-    MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/?retryWrites=true&w=majority
-    PORT=5000
-    ```
+
+   ```env
+   MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/?retryWrites=true&w=majority
+   PORT=5000
+   ```
 
 4. Start the backend server:
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 ### Frontend
 
 1. Navigate to the frontend directory and install dependencies:
-    ```bash
-    cd ../booksHub-frontEnd
-    npm install
-    ```
+
+   ```bash
+   cd ../booksHub-frontEnd
+   npm install
+   ```
 
 2. Start the frontend application:
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 ## Usage
 
@@ -106,10 +110,10 @@ BooksHub/
 ## Technologies Used
 
 - **Backend**:
+
   - Node.js
   - Express
   - MongoDB
- 
 
 - **Frontend**:
   - React
