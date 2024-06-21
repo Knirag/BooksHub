@@ -3,26 +3,32 @@ import { Link } from "react-router-dom";
 import { GiSpellBook } from "react-icons/gi";
 import "../App.css";
 
-const NavBar = () => {
+interface NavigationItem {
+  title: string;
+  link: string;
+}
+
+const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       setIsSticky(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navigationItems = [
+  const navigationItems: NavigationItem[] = [
     { title: "Home", link: "/" },
     { title: "Upload", link: "/uploadbooks" },
     { title: "My Books", link: "/mybooks" },
+    { title: "Browse Library", link: "/allbooks" },
   ];
 
   return (
@@ -46,12 +52,6 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-<form action="" className="search-bar">
-  <input type="search" name="search" pattern=".*\S.*" required/>
-  <button className="search-btn" type="submit">
-    <span>Search</span>
-  </button>
-</form>
       </nav>
     </header>
   );

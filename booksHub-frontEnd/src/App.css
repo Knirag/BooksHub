@@ -194,7 +194,7 @@ body {
 }
 
 .navbar {
-  background-color: tan;
+  background-color: rgb(114, 65, 1);
   position: fixed;
   top: 0;
   width: 100%;
@@ -203,7 +203,7 @@ body {
 }
 
 .navbar.sticky {
-  background-color: brown;
+  background-color: tan;
 }
 
 .navbar-container {
@@ -233,6 +233,11 @@ body {
   margin-left: 10px;
   color: white;
   font-size: 24px;
+  font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    margin: 4px;
 }
 
 .nav-links {
@@ -261,6 +266,10 @@ body {
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
+    font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
 }
 
 .nav-link:hover {
@@ -323,11 +332,12 @@ body {
 .search-bar {
   margin: auto;
   padding: 1.5em;
-  justify-content: center;
+  margin-right:400px ;
   max-width: 30em;
 }
 .search-bar input {
   background: transparent;
+  margin-left:-100px;
   border-radius: 1.5em;
   box-shadow: 0 0 0 0.4em #171717 inset;
   padding: 0.75em;
@@ -390,7 +400,7 @@ body {
 /* Active state */
 .search-bar input:focus + .search-btn,
 .search-bar input:valid + .search-btn {
-  background: #2762f3;
+  background: #842c00;
   border-radius: 0 0.375em 0.375em 0;
   transform: scale(1);
 }
@@ -403,7 +413,7 @@ body {
 .search-bar input:focus + .search-btn:hover,
 .search-bar input:valid + .search-btn:hover,
 .search-bar input:valid:not(:focus) + .search-btn:focus {
-  background: #0c48db;
+  background: #783400;
 }
 .search-bar input:focus + .search-btn:active,
 .search-bar input:valid + .search-btn:active {
@@ -430,45 +440,113 @@ body {
   }
 }
 }
-
+/* HomePage */
+.comp-label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 4px;
+  font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: overline;
+}
+.book-rec-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .swiper {
   width: 100%;
   height: 100%;
+  /* margin: 0 auto; */
 }
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff5bb;
+  text-decoration: none;
+  font-size: 20px;
+    text-decoration: none;
+
+  background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 30px;
 }
-
-.swiper-slide img {
-  display: block;
+.swiper-slide image {
+  display: flex;
   width: 100%;
   height: 100%;
+  
   object-fit: cover;
+
 }
-.book-cards-container {
-  max-width: 1200px;
-  margin: 0 px;
-  padding: 20px;
+.swiper-slide img {
+  display: block;
+  width: 160px;
+  height: 200px;
+  margin: 0 auto;
+  object-fit:fill;
 }
 
+
+.swiper.swiper-initialized.swiper-horizontal.mySwiper{
+  width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 10px;
+   
+}
+.swiper-slide.swiper-slide-active{
+margin-left: 27px;
+}
+.book-cards-container {
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+}
+.book-cards-container2 {
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: -10px;
+}
+.book-Name{
+  text-decoration: none;
+  border: none;
+  margin-top: 10px;
+  color: #171717;
+  font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.book-Author{
+  font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+      color: #171717;
+      font-size: 13px;
+}
+.slider-link{
+  text-decoration: none;
+}
 .mySwiper {
   width: 100%;
   height: 100%;
 }
 
 .mySwiper .swiper-slide {
-  display: flex;
+    display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f0f0;
+  background: #ffffff00;
   border-radius: 10px;
-  height: 300px;
+  height: 400px;
 
 }
 
@@ -476,54 +554,425 @@ body {
   background-color: #613802;
 }
 /* Upload Books */
-.upload-books-container {
+.upload-books-container{
+  margin: 0 auto;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
+  width:100%;;
+  flex-direction: column;
+  margin-left: 350px;
+}
+.form-label{
+  margin: 5px 0;
+  font-size: 25px;
+  font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.upload-form{
+  border: #171717 2px solid;
+  border-radius: 30px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: calc(100vh - 50px);
-  /* Adjust this value as needed */
-  margin-top: 50px;
-  /* Adjust this value as needed to separate from navbar */
+  justify-content: center;
+  width: 400px;
+  padding: 30px;
+}
+.book-label{
+  margin: 5px 0;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+.book-input{
+  border-radius: 4px;
+  width: 304px;
+  height:30px;
+  background: none;
+  border: #8a4a00 1px solid;
+  outline: none;
+}
+.book-input-textarea{
+    border-radius: 4px;
+      width: 300px;
+      height: 70px;
+      background: none;
+      border: #8a4a00 1px solid;
+        outline: none;
+}
+.submit-book{
+  border: #8a4a00 2px solid;
+  background-color: tan;
+  border-radius: 4px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  padding: 3px;
+  color: #8a4a00;
+  text-transform: uppercase;
+  font-family: "Playfair Display", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+/* All books library */
+.all-books-container{
+  margin-top: 70px;
+  padding: 10px;
+}
+.filtering-row{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+justify-content: flex-end;
+position: absolute;
+right: 12px;
+}
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  gap: 20px;
 }
 
-.upload-books-form {
-  background-color: #f9f9f9;
-  padding: 20px;
+.book-card {
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.book-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.book-card p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.book-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #6e3400;
+  text-decoration: none;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #744500;
+  color: white;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #ddd;
+}
+/* book-info */
+.book-info-container{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  border: #3d3d3d  1px solid;
+  margin-left: 300px;
+
+}
+.bookInfo-image{
+  width: 200px;
+  height: 300px;
+object-fit: fill;
+}
+.bookInfo-Title{
+  font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    padding: 3px;
+    margin: 13px;
+}
+.bookDetail-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: start;
+}
+.bookInfo-image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+
+}
+.bookDetail-container{
+display: flex;
+border-top: #744500 solid 1px ;
+margin-top: 2px;
+padding: 7px;
+}
+.book-detail-label{
+  font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.book-detail-info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 400px
+}
+.book-detail{
+  gap: 50px;
+}
+:root {
+  --color-brand: #744500;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --font-fam: Arial, sans-serif;
+  --height: 40px;
+  --btn-width: 80px;
+  --rad: 5px;
+  --dur: 0.3s;
+  --bez: cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+.favorite-books-container {
+  padding: 20px;
+}
+
+.search-bar {
+  position: relative;
+  width: 30rem;
+  background: var(--color-brand);
+  border-radius: var(--rad);
+  margin-bottom: 20px;
+}
+
+.search-label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.search-input,
+.search-btn {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.8rem;
+}
+
+.search-input[type="search"] {
+  outline: 0;
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none;
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+
+.search-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: var(--color-brand);
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+
+.search-input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+}
+
+.search-input:not(:placeholder-shown)+.search-btn {
+  display: block;
+}
+
+.detail-card {
+  border: 1px solid #ccc;
+  border-radius: var(--rad);
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+}
+
+.title-more-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line-card {
+  border-top: #744500 solid 1px;
+  margin: 10px 0;
+}
+
+.description-card {
   display: flex;
   flex-direction: column;
 }
 
-.upload-books-form h5 {
-  margin-bottom: 15px;
+.row-items-card {
+  display: flex;
+  justify-content: space-between;
 }
 
-.upload-books-form label {
-  margin-top: 10px;
-  margin-bottom: 5px;
+.item-card {
+  flex: 1;
+  margin: 10px;
 }
 
-.upload-books-form input,
-.upload-books-form textarea {
-  width: 100%;
-  padding: 8px;
+.item-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item-card li {
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+}
+/* .favorite-button{
+  display: flex;
+} */
+.button-favorite{
+  font-size: 30px;
+}
+.info-download-button{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  /* gap: 100px; */
+margin-top: 14px;
+width: 100%;
+}
+.download-book{
+  border: #823f00 2px solid;
+  padding: 7px;
+  margin: 0 auto;
+}
+.download-link{
+    text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #783400;
+}
+.download-link :hover {
+background-color: tan;
+cursor: pointer;
 }
 
-.upload-books-form button {
-  padding: 10px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
+/* Favorite Books */
+.favorite-books-container{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  border: #3d3d3d  1px solid;
+  border-radius: 6px;
+  margin-left: 300px;
+  color: #171717;
 }
+.favorite-books-container a{
+  text-decoration: none;
+  color: #814b00;
+}
+.book-title{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    padding: 3px;
+    margin: 13px;
+}
+.book-image-column{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100px;
+  height: 200px;
+  margin-left: 12px;
+}
+.book-image{
+  object-fit: fill ;
+}
+.book-detail-column{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items:flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: -190px;
+  margin-left:200px;
+  padding: 20px;
+}
+.favbook-detail-label{
+  font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+.favbook-detail{
 
-.upload-books-form button:hover {
-  background-color: #0056b3;
+    font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+      font-size: 13px;
 }

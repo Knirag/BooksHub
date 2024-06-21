@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BookCards from "./BookCards";
 import FavoriteBooks from "./FavoriteBooks";
 
 export const BooksContainer = styled.div`
@@ -9,14 +8,13 @@ export const BooksContainer = styled.div`
   margin: 0 auto;
   margin-top: 100px;
 `;
-const BooksHubPage = () => {
+
+const BooksHubPage: React.FC = () => {
   return (
     <div>
       <BooksContainer>
-        <h2>FOR YOU</h2>
+        <FavoriteBooks />
       </BooksContainer>
-      <BookCards />
-      <FavoriteBooks />
     </div>
   );
 };
